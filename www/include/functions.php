@@ -10,7 +10,7 @@ function retrieveRandomConnection($linkedinId){
 	   $user1 = getUserLimited($randomuserId);
 	   $user1Final = array();
 	   $user1Final['pic'] = $user1['pictureUrl']; 
-	   $pieces = explode("at", $user1['headline']);
+	   $pieces = explode(" at ", $user1['headline']);
 	   $user1Final['name'] = $user1['firstname']. ' '. $user1['lastname'];
 	   $user1Final['job'] = $pieces[0];
 	   $user1Final['company'] = $pieces[1];
@@ -25,7 +25,7 @@ function retrieveRandomConnection($linkedinId){
    		$user2 = getUserLimited($randomuserId2);
    		$user2Final = array();
 	   $user2Final['pic'] = $user2['pictureUrl']; 
-	   $pieces = explode("at", $user2['headline']);
+	   $pieces = explode(" at ", $user2['headline']);
 	   $user2Final['job'] = $pieces[0];
 	   $user2Final['company'] = $pieces[1];   
    

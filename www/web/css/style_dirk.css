@@ -29,12 +29,24 @@
 }
 
 .picclickedright {
-	background-color:green;
+	background-color:#C3FDB8;
 	xwidth:350px;
+	    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -o-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -khtml-border-radius: 10px;
+    border-radius: 10px;
 }
 
 .picclickedwrong {
-  background-color:red;	
+  background-color:#F75D59;
+      -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -o-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -khtml-border-radius: 10px;
+    border-radius: 10px;
 }
 
 .hidden {
@@ -102,16 +114,16 @@
 	background-color:#C3FDB8;
 	    height: 20px;
 	    color:#2c2c2c;
-	        font-size: 12px;
     font-weight: 600;
+      font-size: 18px;
 }
 
 .incorrectbutton {
 	background-color:#F75D59;
 	    height: 20px;
 	    color:#fff;
-	        font-size: 12px;
     font-weight: 600;
+      font-size: 18px;
     
 }
 
@@ -185,12 +197,12 @@
 
 .buttonWhite {
     text-decoration: none;
-    line-height: 10px;
+    line-height: 15px;
     height: 20px;
     padding: 20px 20px;
     color: #2c2c2c;
     background: #1C84DF;
-    font-size: 12px;
+    font-size: 18px;
     font-weight: 600;
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
