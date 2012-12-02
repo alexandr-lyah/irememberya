@@ -98,7 +98,7 @@
             &nbsp; &nbsp;
             	
             Your score: <span id="scorenumber">0</span>
-            <a href="logout.php" class="logout" style="margin-left:0px;">Logout</a>      	
+            <a href="logout.php" class="logout" style="margin-left:20px;">Logout</a>      	
         {/auth}
         </div>
         <div style="margin-left:150px;"><a href="{auth default="index.php"}dashboard.php{/auth}"><img class="logo" src="tpl/img/logo.png"/></a>
