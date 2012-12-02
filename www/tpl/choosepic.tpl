@@ -7,6 +7,7 @@ var job_right = "CEO";
 var job_wrong = "Bus driver";
 var company_right = "AngelList";
 var company_wrong = "Ebay";
+var score = 0;
 
 function getNextData() {
 	console.log("getNextData")
@@ -54,9 +55,12 @@ $(document).ready(function(){
 		var pictureCorrect = pictureIsCorrect($(this).attr("src"));
 		updateScore(pictureCorrect);
 		var newclassname = "picclickedwrong";
+		var scoreChange = -1;
 		if(pictureCorrect) {
 			newclassname = "picclickedright";
+			scoreChange = 1;
 		}
+		updateScore(scoreChange);
 	  $(this).parent().parent().addClass(newclassname);
 		$("#continuepicturebutton").css("visibility", "visible");
 	});
@@ -95,10 +99,6 @@ function pictureIsCorrect(pictureSrc) {
 	return pictureSrc == pictureurl_right;
 }
 
-function updateScore(correct) {
-	
-}
-
 function updateInfo() {
 	$('#namecontainer').html(name);
 	if(randomBoolean()) {
@@ -134,12 +134,10 @@ function randomBoolean() {
 
 
 function jobIsCorrect(jobTitle) {
-	console.log(" jobTitle = " + jobTitle)
 	return jobTitle == job_right;
 }
 
 function companyIsCorrect(company) {
-	console.log(" company = " + company)
 	return company == company_right;
 }
 
@@ -167,11 +165,14 @@ function showCompanyQuestion() {
 
 function showJobCorrect(correct, clickedButton) {
 	var classname = "correctbutton";
+	var scoreChange = 1;
 	if(!correct) {
 		classname = "incorrectbutton";
+		scoreChange = -1;
 	}
 	$(clickedButton).addClass(classname);
 	$('#continuejobbutton').css("visibility", "visible");
+	updateScore(scoreChange);
 }
 
 function showCompanyCorrect(correct, clickedButton) {
@@ -179,11 +180,14 @@ function showCompanyCorrect(correct, clickedButton) {
 	//$('#continuecompanybutton').show();
 	console.log("clickedButton:" + clickedButton);
 	var classname = "correctbutton";
+	var scoreChange = 1;
 	if(!correct) {
 		classname = "incorrectbutton";
+		scoreChange = -1;
 	}
 	$(clickedButton).addClass(classname);
 	$('#continuecompanybutton').css("visibility", "visible");
+	updateScore(scoreChange);
 }
 
 function showEndResult() {
@@ -196,6 +200,11 @@ function showEndResult() {
 	$('#reconnectcompany').html(company_right);
 	
 	$('#getintouchquestion').show();
+}
+
+function updateScore(scoreChange) {
+	 score += scoreChange;
+	 $('#scorenumber').html("" + score);
 }
 
 function refresh() {
@@ -216,7 +225,9 @@ function refresh() {
 
 <div class="content center">
 	
-	<div class="innercontainer" id="picturequestion" style="display:xnone">
+	<div id="scorecontainer">Your score: <span id="scorenumber"></span></div>
+	
+	<div class="innercontainer" id="picturequestion">
 		<div>
 			<h1>Who is <span id="namecontainer"></span>?</h1>
 		</div>
