@@ -1,10 +1,15 @@
-var name = "Nick Frost"
-var pictureurl_right = "http://m.c.lnkd.licdn.com/media/p/2/000/022/3e0/2824410.jpg";
-var pictureurl_wrong = "http://m.c.lnkd.licdn.com/media/p/4/000/182/3cc/38a92ec.jpg";
-var job_right = "CEO";
-var job_wrong = "Bus driver";
-var company_right = "AngelList";
-var company_wrong = "Ebay";
+
+var dummypicurl = "http://m.c.lnkd.licdn.com/media/p/2/000/022/3e0/2824410.jpg";
+var dummyjobwrong = "Bus driver";
+var dummycompanywrong = "Lucas Arts";
+
+var name = "";
+var pictureurl_right = "";
+var pictureurl_wrong = "";
+var job_right = "";
+var job_wrong = "";
+var company_right = "";
+var company_wrong = "";
 var score = 0;
 
 //for buggy hide/show
@@ -14,7 +19,7 @@ function getNextData() {
 	console.log("getNextData, hasReachedEnd = " + hasReachedEnd)
 	if(!hasReachedEnd) {
 		console.log("break!! " + hasReachedEnd);
-		//return;
+		return;
 	}
 	$.getJSON('details.php', function(data) {
 		console.log("new data loaded");
@@ -22,14 +27,16 @@ function getNextData() {
 		$.each(data, function(key, val) {
 			if(key =="cool") {
 				$.each(val, function(key2, val2) {
+					console.log("cool key2 = " + key2);
 					if(key2 == "name") {
-						name = val2
+						name = val2;
 					}
 					else if(key2 == "pic") {
 						pictureurl_right = val2;
 					}
 					else if(key2 == "job") {
 						job_right = val2;
+						console.log("job_right = " + job_right);
 					}
 					else if(key2 == "company") {
 						company_right = val2;
@@ -40,16 +47,23 @@ function getNextData() {
 			else {
 				$.each(val, function(key2, val2) {
 					if(key2 == "pic") {
-						pictureurl_wrong = val2
+						pictureurl_wrong = val2;
+						if (pictureurl_wrong == null || pictureurl_wrong == "null" || pictureurl_wrong == "") {
+							pictureurl_wrong = dummypicurl;
+						}
 					}
 					else if(key2 == "job") {
-						job_wrong = val2
+						job_wrong = val2;
+						if (job_wrong == null || job_wrong == "null" || job_wrong == "") {
+							job_wrong = dummyjobwrong;
+						}
+						console.log("job_wrong = " + job_wrong);
 					}
 					else if(key2 == "company") {
 						company_wrong = val2;
 						console.log("company_wrong = " + company_wrong);
-						if (company_wrong == null) {
-							company_wrong = "Disney";
+						if (company_wrong == null || company_wrong == "null" || company_wrong == "") {
+							company_wrong = dummycompanywrong;
 						}
 					}
 				});
@@ -124,10 +138,18 @@ function updateInitialInfo() {
 }
 
 function showJobQuestion() {
+	console.log("showJobQuestion");
+	$('#titlecompanyquestion').html("What is their title?");
 	$("#titlequestion").show();
+	$(".personjob").show();
+	$(".personjob").addClass("buttonWhite");
+	
 	$('#titlepiccorrect').attr("src", pictureurl_right);
 	$('#namecorrect').html(name);
 	$("#picturequestion").hide();
+	$("#continuecompanybutton").hide();
+	console.log("job one html: " + $('#titleone').html());
+	console.log("job two html: " + $('#titletwo').html());
 	if(randomBoolean()) {
 		$('#titleone').html(job_wrong);
 		$('#titletwo').html(job_right);
@@ -136,6 +158,8 @@ function showJobQuestion() {
 		$('#titleone').html(job_right);
 		$('#titletwo').html(job_wrong);
 	}
+	console.log("post job one html: " + $('#titleone').html());
+	console.log("post job two html: " + $('#titletwo').html());
 }
 
 function randomBoolean() {
@@ -158,6 +182,7 @@ function showCompanyQuestion() {
 	$('#jobcorrect').html(job_right);
 	$('.personjob').hide();
 	$('#continuejobbutton').hide();
+	$(".personcompany").addClass("buttonWhite");
 	if(randomBoolean()) {
 		$('#companyone').html(company_wrong);
 		$('#companytwo').html(company_right);
@@ -179,7 +204,6 @@ function showJobCorrect(correct, clickedButton) {
 		classname = "incorrectbutton";
 		scoreChange = -1;
 	}
-	//$(clickedButton).addClass(classname);\
 	$(clickedButton).removeClass("buttonWhite");
 	$(clickedButton).addClass(classname);
 	$('#continuejobbutton').show();
@@ -232,6 +256,7 @@ function refresh() {
 	$('#continuepicturebutton').hide();
 	$('.personcompany').removeClass("correctbutton");
 	$('.personcompany').removeClass("incorrectbutton");
+	$('.personcompany').hide();
 	//$('.personcompany').html('');
 	
 	$('.personjob').removeClass("correctbutton");
