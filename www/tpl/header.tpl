@@ -2,7 +2,7 @@
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>{$title}</title>
+    <title>iRememberYa!</title>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <link rel="stylesheet" type="text/css" href="{$baseUrl}web/css/reset.css"/>
     <link rel="stylesheet" type="text/css" href="{$baseUrl}web/css/style.css"/>
@@ -58,8 +58,6 @@
     <!-- Social Libs -->
     <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
 
-	{include file="analytics.tpl"}
-
 	{include file="headercommon.tpl"}
 
     <base href="{$baseUrl}" />
@@ -69,20 +67,20 @@
 
 <div id="header">
     <div class="content">
-        <div class="floatright paddingTop15px marginright30px">
+        <div class="floatright paddingTop15px" style="margin:0 200px 0 200px; margin-left:100px;">
         {if $displayshare}
             <div class="right marginpadding0">
                 <div class="floatleft shares" style="padding-top: 1px;">
                     <script src="http://platform.linkedin.com/in.js" type="text/javascript"></script>
-                    <script type="IN/Share" data-url="http://top3skills.com/" data-counter="right"></script>
+                    <script type="IN/Share" data-url="http://irememberya.com/" data-counter="right"></script>
                 </div>
                 <div class="floatleft shares">
-                    <a class="twitter-share-button" data-url="http://www.top3skills.com"
+                    <a class="twitter-share-button" data-url="http://www.irememberya.com"
                        data-text="{$LANG.tweetIndex}" data-count="none"
-                       data-via="top3skills">Tweet</a>
+                       data-via="irememberya">Tweet</a>
                 </div>
                 <div class="floatleft shares">
-                <iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.facebook.com%2Fpages%2FTop3Skills%2F213080142035951&amp;layout=button_count&amp;show_faces=false&amp;width=200&amp;action=like&amp;font&amp;colorscheme=light&amp;height=21&amp;ref=headerindex"
+                <iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.facebook.com%2Fpages%2FiRememberYa%2F213080142035951&amp;layout=button_count&amp;show_faces=false&amp;width=200&amp;action=like&amp;font&amp;colorscheme=light&amp;height=21&amp;ref=headerindex"
                 scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:90px; height:21px;" allowTransparency="true"></iframe>
                 </div>
             </div>
@@ -98,7 +96,7 @@
             <a href="logout.php" class="logout">Logout</a>
         {/auth}
         </div>
-        <div class="marginleft20px"><a href="{auth default="index.php"}dashboard.php{/auth}"><img class="logo" src="tpl/img/logo.png"/></a>
+        <div style="margin-left:150px;"><a href="{auth default="index.php"}dashboard.php{/auth}"><img class="logo" src="tpl/img/logo.png"/></a>
         </div>
     </div>
 </div>
