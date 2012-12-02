@@ -1,4 +1,5 @@
-<?PHP
+#!/usr/bin/env php
+<?php
 
 if(file_exists("/home/dotcloud/environment.json")) {
     /* configuration on dotCloud */
