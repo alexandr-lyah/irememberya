@@ -59,16 +59,18 @@
     <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
 		<script type="text/javascript" src="{$baseUrl}web/js/choosepic.js"></script>
 
+<link rel="stylesheet" href="http://twitter.github.com/bootstrap/1.4.0/bootstrap.min.css" />
+
 	{include file="headercommon.tpl"}
 
     <base href="{$baseUrl}" />
 </head>
-<body>
+<body style="background: #f3f3f3;">
 {errorsucess}
 
 <div id="header">
     <div class="content">
-        <div class="floatright paddingTop15px" style="margin:0 200px 0 200px; margin-left:100px;">
+        <div class="floatright paddingTop15px" style="margin:0 150px 0 130px; margin-left:10px;">
         {if $displayshare}
             <div class="right marginpadding0">
                 <div class="floatleft shares" style="padding-top: 1px;">
@@ -94,7 +96,9 @@
             <a class="headerMenuLinks lboards" href="leaderboard.php">Leaderboard</a>
             {/if}
             &nbsp; &nbsp;
-            <a href="logout.php" class="logout">Logout</a>
+            	
+            Your score: <span id="scorenumber">0</span>
+            <a href="logout.php" class="logout" style="margin-left:0px;">Logout</a>      	
         {/auth}
         </div>
         <div style="margin-left:150px;"><a href="{auth default="index.php"}dashboard.php{/auth}"><img class="logo" src="tpl/img/logo.png"/></a>

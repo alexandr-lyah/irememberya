@@ -16,13 +16,11 @@
 #leftprofilepicframe {
 	xbackground-color:pink;
 	float:left;
-	
 }
 
 #rightprofilepicframe {
 	xbackground-color:purple;
-	margin-left:320px;
-	margin-top:-20px;
+	float:right;
 }
 
 .pictureframe {
@@ -107,4 +105,3 @@
 .incorrectbutton {
 	background-color:red;
 }
-
