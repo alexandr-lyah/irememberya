@@ -50,7 +50,7 @@
                 </div>
                 <div class="floatleft shares">
                     <a class="twitter-share-button" data-url="http://www.irememberya.com"
-                       data-text="{$LANG.tweetIndex}" data-count="none"
+                       data-text="iRememberYa! - Learn and Refresh your Social Network" data-count="none"
                        data-via="irememberya">Tweet</a>
                 </div>
                 <div class="floatleft shares">
