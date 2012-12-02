@@ -179,6 +179,8 @@ function showJobCorrect(correct, clickedButton) {
 		classname = "incorrectbutton";
 		scoreChange = -1;
 	}
+	//$(clickedButton).addClass(classname);\
+	$(clickedButton).removeClass("buttonWhite");
 	$(clickedButton).addClass(classname);
 	$('#continuejobbutton').show();
 	$('#continuejobbutton').css("visibility", "visible");
@@ -195,6 +197,7 @@ function showCompanyCorrect(correct, clickedButton) {
 		classname = "incorrectbutton";
 		scoreChange = -1;
 	}
+	$(clickedButton).removeClass("buttonWhite");
 	$(clickedButton).addClass(classname);
 	//$('#continuecompanybutton').css("visibility", "visible");
 	updateScore(scoreChange);

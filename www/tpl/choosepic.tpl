@@ -36,13 +36,13 @@
 		</div>
 	
 		<div class="rightcolumn">
-			<div id="titleone" class="personjob">hacker</div>
-			<div id="titletwo" class="personjob ">Social Media Officer</div>
+			<div id="titleone" class="personjob buttonWhite">hacker</div>
+			<div id="titletwo" class="personjob buttonWhite">Social Media Officer</div>
 			
 			<div class="button hidden" id="continuejobbutton">Continue</div>
 			
-			<div id="companyone" class="personcompany nodisplay">hacker</div>
-			<div id="companytwo" class="personcompany nodisplay">Social Media Officer</div>
+			<div id="companyone" class="personcompany nodisplay buttonWhite">hacker</div>
+			<div id="companytwo" class="personcompany nodisplay buttonWhite">Social Media Officer</div>
 			
 			<div class="button hidden" id="continuecompanybutton">Continue</div>
 		</div>
