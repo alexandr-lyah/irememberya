@@ -181,6 +181,7 @@ function showJobCorrect(correct, clickedButton) {
 	}
 	$(clickedButton).addClass(classname);
 	$('#continuejobbutton').show();
+	$('#continuejobbutton').css("visibility", "visible");
 	updateScore(scoreChange);
 }
 
@@ -217,7 +218,7 @@ function updateScore(scoreChange) {
 	 score += scoreChange;
 	 $('#scorenumber').html("" + score);
 }
-
+ 
 function refresh() {
 	
 	$('#picturequestion').show();
