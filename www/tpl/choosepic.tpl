@@ -219,6 +219,7 @@ function refresh() {
 	$('#rightprofilepicframe').removeClass("picclickedright");
 	$('#leftprofilepicframe').removeClass("picclickedwrong");
 	$('#rightprofilepicframe').removeClass("picclickedwrong");
+	//$('#reconnectinfo').children.
 }
 </script>
 
