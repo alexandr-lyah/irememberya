@@ -51,54 +51,42 @@ function getNextData() {
 $(document).ready(function(){
 	getNextData();
 	$(".profilepic").click(function() {
-		console.log(" src = " + $(this).attr("src"))
-		var newclassname = "picclickedwrong";
 		var pictureCorrect = pictureIsCorrect($(this).attr("src"));
 		updateScore(pictureCorrect);
+		var newclassname = "picclickedwrong";
 		if(pictureCorrect) {
 			newclassname = "picclickedright";
 		}
 	  $(this).parent().parent().addClass(newclassname);
 		$("#continuepicturebutton").css("visibility", "visible");
 	});
+	
 	$("#continuepicturebutton").click(function() {
-		console.log("continuebutton clicked");
-		//getNextData();
 		showJobQuestion();
 	});
 	$('.personjob').click(function() {
-		console.log("personjob clicked");
 		var jobCorrect = jobIsCorrect($(this).html());
-		console.log("jobCorrect ; " + jobCorrect);
 		showJobCorrect(jobCorrect, this);
 	})
 	
 	$("#continuejobbutton").click(function() {
-		console.log("continuejobbutton clicked");
-		//getNextData();
 		showCompanyQuestion();
 	});
 	
 	$('.personcompany').click(function() {
-		console.log("personcompany clicked");
 		var companyCorrect = companyIsCorrect($(this).html());
-		console.log("companyCorrect ; " + companyCorrect);
 		showCompanyCorrect(companyCorrect, this);
 	});
 	
 	
 	$("#continuecompanybutton").click(function() {
-		console.log("continuecompanybutton clicked");
 		showEndResult();
 	});
 	
 	$(".reconnectbutton").click(function() {
-		console.log("reconnectbutton clicked");
 		refresh();
 		getNextData();
 	});
-	
-	 
 	
 });
 
@@ -124,7 +112,8 @@ function updateInfo() {
 }
 
 function showJobQuestion() {
-	$("#titlequestion").css("visibility", "visible");
+	//$("#titlequestion").css("visibility", "visible");
+	$("#titlequestion").show();
 	$('#titlepiccorrect').attr("src", pictureurl_right);
 	$('#namecorrect').html(name);
 	$("#picturequestion").hide();
@@ -201,15 +190,26 @@ function showEndResult() {
 	//alert("end!");
 	$('#titlequestion').hide();
 	$('#picright2').attr("src", pictureurl_right);
-	$('#getintouchquestion').css("visibility", "visible");
 	
 	$('#reconnectname').html(name);
 	$('#reconnectjob').html(job_right);
 	$('#reconnectcompany').html(company_right);
+	
+	$('#getintouchquestion').show();
 }
 
 function refresh() {
-	
+	$('#picturequestion').show();
+	$('#titlequestion').hide();
+	$('#getintouchquestion').hide();
+	$('.personcompany').removeClass("correctbutton");
+	$('.personcompany').removeClass("incorrectbutton");
+	$('.personjob').removeClass("correctbutton");
+	$('.personjob').removeClass("incorrectbutton");
+	$('#leftprofilepicframe').removeClass("picclickedright");
+	$('#rightprofilepicframe').removeClass("picclickedright");
+	$('#leftprofilepicframe').removeClass("picclickedwrong");
+	$('#rightprofilepicframe').removeClass("picclickedwrong");
 }
 </script>
 
@@ -234,7 +234,7 @@ function refresh() {
 		<div class="button hidden" id="continuepicturebutton">Continue</div>
 	</div>
 	
-	<div class="innercontainer hidden" id="titlequestion">
+	<div class="innercontainer nodisplay" id="titlequestion">
 		<div>
 			<h1 id="titlecompanyquestion">What is their title?</h1>
 		</div>
@@ -266,7 +266,7 @@ function refresh() {
 	
 	<!--<div class="innercontainer hidden" id="companyquestion">company</div> -->
 	
-	<div class="innercontainer hidden" id="getintouchquestion">
+	<div class="innercontainer nodisplay" id="getintouchquestion">
 		<div>time to reconnect?</div>
 		<div id="reconnectop">
 			<div id="reconnectpicture">
