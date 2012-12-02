@@ -1,0 +1,12 @@
+/* view all connections page*/
+
+.connectionsInlineBox {
+  display: inline-block !important;
+  color: red;
+}
+
+.connectionsInlineBoxHack {
+  display: inline-block;
+  height: 68px;
+  vertical-align: middle;
+}

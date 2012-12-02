@@ -1,4 +1,3 @@
-#!/usr/bin/env php
 <?PHP
 
 if(file_exists("/home/dotcloud/environment.json")) {
@@ -12,25 +11,14 @@ else {
     $dsn = 'mysql:dbname=irememberya;host=127.0.0.1;';
     $user = 'root';
     $password = 'root';
-    $dbname = 'irememberya-php';
+    $dbname = 'irememberya';
+    $host = "localhost";
 }
 
-echo "Connection to the database..";
-$tries = 0;
-connection:
-try {
-    echo ".";
-    flush();
-    $dbh = new PDO("mysql:host=$host;port=$port", $user, $password);
-    echo "\n";
-    echo "Create DB '$dbname' if needed\n";
-    $dbh->exec("CREATE DATABASE IF NOT EXISTS `$dbname`") or die(print_r($dbh->errorInfo(), true));
-} catch (Exception $e) {
-    sleep(1);
-    if(++$tries <= 30)
-        goto connection;
-    else{
-        echo "\n";
-        die ("Could not connect to the database server\n");
-    }        
-}
+$dbType = 'mysql';   // what driver to use to connect
+$dbName = $dbname;
+$dbUser = $user;
+$dbPass = $password;
+$dbHost = $host;
+
+?>

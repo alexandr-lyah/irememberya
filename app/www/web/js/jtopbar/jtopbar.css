@@ -1,0 +1,73 @@
+.topbarBox {
+    width: 960px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    display: none;
+    height: 100px;
+
+    -moz-border-radius-bottomright: 20px;
+    -moz-border-radius-bottomleft: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+
+    filter: alpha(opacity = 95);
+    -moz-opacity: 0.95;
+    -khtml-opacity: 0.95;
+    opacity: 0.95;
+}
+
+.topbarOverlay {
+    height: 100px;
+}
+
+.topbarMessage {
+    padding-top: 40px;
+    font-size: 38px;
+    padding-left: 80px;
+}
+
+.topbarBox.sucess {
+    background-color: #f2fff2;
+    border-left: solid 5px #007E00;
+    border-right: solid 5px #007E00;
+    border-bottom: solid 5px #007E00;
+    background-image: url("../../icons/bigok.png");
+    background-position: 15px center;
+    background-repeat: no-repeat;
+}
+
+.topbarBox.error {
+    background-color: #FFDFFD;
+    border-left: solid 5px #F00;
+    border-right: solid 5px #F00;
+    border-bottom: solid 5px #F00;
+    background-image: url("../../icons/bigerror.png");
+    background-position: 15px center;
+    background-repeat: no-repeat;
+}
+
+.topbarBox.sucess {
+    background-color: #f2fff2;
+    border-left: solid 5px #007E00;
+    border-right: solid 5px #007E00;
+    border-bottom: solid 5px #007E00;
+    background-image: url("../../icons/bigok.png");
+    background-position: 15px center;
+    background-repeat: no-repeat;
+}
+
+.topbarBox.info {
+    background-color: #fff6bf;
+    border-left: 2px solid #ffd324;
+    border-right: 2px solid #ffd324;
+    border-bottom: 2px solid #ffd324;
+}
+
+.topbarBox.info .topbarMessage{
+    padding-left: 10px !important;
+    font-size: 20px;
+    text-align: center;
+}

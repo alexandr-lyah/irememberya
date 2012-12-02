@@ -1,0 +1,7 @@
+RewriteEngine on
+RewriteRule ^leaderboard/(.*)/(.*)/(.*) /leaderboard.php?act=generate&people=$1&skill=$2&loc=$3 [L]
+RewriteRule ^leaderboard/(.*)/(.*) /leaderboard.php?act=generate&people=$1&skill=$2 [L]
+RewriteRule ^([[a-zA-Z0-9]+)$ /addskills.php?uid=$1
+
+RewriteCond %{HTTP_HOST} ^www.top3skills.com$
+RewriteRule ^(.*)$ "http\:\/\/top3skills\.com/$1" [R=301,L]

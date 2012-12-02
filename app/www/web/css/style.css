@@ -1,0 +1,1060 @@
+body {
+    background: #f3f3f3; /* background: #f3f3f3 url('../../tpl/img/noise.png'); */
+    color: #5c5c5c;
+    font: normal normal 13px/18px "Helvetica Neue", Arial, Helvetica, Verdana, sans-serif;
+}
+
+h1 {
+    font: bold 35px "Helvetica Neue", Arial, Helvetica, Verdana, sans-serif;
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.01);
+    color: #2074c0;
+    padding: 20px;
+}
+
+h2 {
+    font: bold 26px "Helvetica Neue", Arial, Helvetica, Verdana, sans-serif;
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.01);
+    color: #2074c0;
+}
+
+h3 {
+    font: bold 26px "Helvetica Neue", Arial, Helvetica, Verdana, sans-serif;
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.01);
+    color: #333;
+}
+
+h4 {
+    font: bold 18px "Helvetica Neue", Arial, Helvetica, Verdana, sans-serif;
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.01);
+    color: #333;
+}
+
+a {
+    font: normal 12px Verdana, Arial, Helvetica sans-serif;
+    color: #2074c0;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* HEADERS */
+#header {
+    background: #f3f3f3 url('../../tpl/img/headerback.png') repeat-x top;
+    height: 56px;
+    text-align: left;
+    color: #DDD;
+    text-shadow: 1px 1px 2px #ccc;
+}
+
+#header a {
+    color: #66ccff;
+}
+
+.shares {
+    margin-left: 7px;
+}
+
+/* Index */
+tr.indexCaptions td {
+    font-style: italic;
+    color: #7C7575;
+    padding: 0 15px;
+    font-size: 12px;
+}
+
+.banner {
+    background: #4aa9df url('../../tpl/img/bannerback3.png') center top repeat-x;
+    margin-top: 0;
+    border-bottom: 2px solid #327191;
+}
+
+.bannersun {
+    background: transparent url('../../tpl/img/bannersun2_opt.png') no-repeat;
+}
+
+.banner h1 {
+    letter-spacing: 2px;
+    font-weight: bold;
+    font-size: 42px;
+    text-shadow: 0px 1px 1px #000;
+    color: #fff;
+    padding-bottom: 15px;
+}
+
+.indexp {
+    color: #bbe7ff;
+    color: #243d4a;
+    font-size: 15px;
+    font-style: italic;
+}
+
+.pill {
+    color: #333;
+    background-color: #FFF;
+    padding-bottom: 2px;
+    padding-top: 2px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 5px 2px #ccc;
+    background-color: #FCFCFC;
+}
+
+.loginbuttondiv {
+    padding: 45px 0;
+}
+
+.loginButton {
+    -webkit-box-shadow: 0 0 5px 2px #02679B;
+    -moz-box-shadow: 0 0 5px 2px #02679B;
+    box-shadow: 0 0 5px 2px #02679B;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+
+}
+
+/* special effects */
+.boxHover {
+    -webkit-box-shadow: 0 0 5px 2px #ccc;
+    -moz-box-shadow: 0 0 5px 2px #ccc;
+    box-shadow: 0 0 5px 2px #ccc;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.content {
+    width: 960px;
+    margin: 0px auto;
+}
+
+.contentindex {
+    width: 900px;
+    margin: 0px auto;
+}
+
+.contentshare {
+    width: 700px;
+    margin: 0px auto;
+}
+
+.leftcolum {
+    float: left;
+    width: 700px;
+}
+
+.rightcolumn {
+    float: left;
+    width: 234px;
+    margin-right: 20px;
+    margin-left: 6px;
+}
+
+.logo {
+    margin-top: 7px;
+}
+
+.rounded {
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -o-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -khtml-border-radius: 5px;
+    border-radius: 5px;
+    border-bottom: 1px solid #dedede;
+    background: #fff;
+    text-align: left;
+    padding: 15px;
+    padding-bottom: 30px;
+    font-size: 14px;
+}
+
+/* references in leaderboard. this sets the default style, background, etc*/
+.references {
+    color: #4086b9;
+    padding: 2px;
+    border: 1px solid #4086b9;
+    background-color: #ecf7ff;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -o-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -khtml-border-radius: 5px;
+    border-radius: 5px;
+}
+
+/* big box for skills count*/
+.referencesCount {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 5px;
+    line-height: 28px;
+    width: 80px;
+    text-align: center;
+    font-size: 10px;
+    zoom: 1;
+    *display: inline;
+}
+
+.referencesCount a {
+    font-size: 10px;
+    font-family: "Helvetica Neue", Arial, Helvetica, Verdana, sans-serif;
+}
+
+.referencesCount .referencesCountTitle {
+    font-size: 24px;
+}
+
+.referencesCount .referencesCountText {
+    line-height: 14px;
+}
+
+/* skills tags */
+.referencesSkills {
+    color: #4086b9;
+    padding: 2px 5px;
+    border: 1px solid #4086b9;
+    background-color: #ecf7ff;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -o-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -khtml-border-radius: 5px;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-right: 2px;
+    margin-bottom: 2px;
+    display: inline-block;
+}
+
+.referencesSkillsSmall {
+    font-size: 12px;
+}
+
+a.referencesSkills:hover {
+    color: #FFF;
+    background-color: #4086b9;
+    text-decoration: none;
+}
+
+#footer {
+    margin-top: 40px;
+    border-top: 1px solid #dedede;
+    padding: 10px;
+    background: #333333;
+    color: #fff;
+}
+
+#footer a {
+    text-decoration: none;
+    color: white;
+}
+
+#footer a:hover {
+    text-decoration: underline;
+}
+
+.footerlink {
+    padding: 0px 5px;
+}
+
+#footer img {
+    vertical-align: bottom;
+}
+
+form input {
+    font-size: 28px;
+    padding: 5px;
+    color: #a09d9d;
+    border: 1px solid #a09d9d;
+    margin: 10px;
+}
+
+form input.reset {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+/* don't show border for checkbox or radio otherwise this causes a bug in IE */
+form input[type=checkbox], form input[type=radio] {
+    border: none;
+    padding: 0;
+}
+
+.button {
+    text-decoration: none;
+    line-height: 40px;
+    height: 40px;
+    padding: 10px 20px;
+    color: white;
+    background: #1C84DF;
+    font-size: 18px;
+    font-weight: 600;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -o-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -khtml-border-radius: 3px;
+    border-radius: 3px;
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #38A5EA), color-stop(100%, #106DD7));
+    background-image: -moz-linear-gradient(top, #38A5EA 0%, #106DD7 100%);
+    background-image: linear-gradient(top, #38A5EA 0%, #106DD7 100%);
+    -webkit-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.1), 0px 1px 3px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.1), 0px 1px 3px rgba(0, 0, 0, 0.8);
+    box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.1), 0px 1px 3px rgba(0, 0, 0, 0.8);
+    -webkit-background-clip: padding-box;
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.8);
+    font-face: Verdana, Arial, Helvetica sans-serif;
+}
+
+a.inputButton {
+    padding: 10px !important;
+}
+
+a.inputButton:hover, a.inputButtonSmall:hover {
+    text-decoration: none;
+}
+
+.inputButton {
+    text-decoration: none;
+    line-height: 43px;
+    height: 43px;
+    margin: 0;
+    padding: 0 20px 2px;
+    color: white;
+    background-color: #1C84DF;
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -o-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -khtml-border-radius: 3px;
+    border-radius: 3px;
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #38A5EA), color-stop(100%, #106DD7));
+    background-image: -moz-linear-gradient(top, #38A5EA 0%, #106DD7 100%);
+    background-image: linear-gradient(top, #38A5EA 0%, #106DD7 100%);
+    -webkit-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.1), 0px 1px 3px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.1), 0px 1px 3px rgba(0, 0, 0, 0.8);
+    box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.1), 0px 1px 3px rgba(0, 0, 0, 0.8);
+    -webkit-background-clip: padding-box;
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.8);
+    font-family: Verdana, Arial, Helvetica sans-serif;
+}
+
+.inputButton:hover, .inputButtonSmall:hover {
+    cursor: pointer;
+    background-image: none;
+    background-color: #38A5EA;
+}
+
+.button:hover {
+    cursor: pointer;
+    background-image: none;
+    background-color: #38A5EA;
+    text-decoration: none;
+}
+
+a.inputButtonSmall, .inputButtonSmall {
+    text-decoration: none;
+    line-height: 20px;
+    height: 20px;
+    margin: 0;
+    padding: 4px;
+    color: white;
+    background-color: #1C84DF;
+    border: none;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -o-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -khtml-border-radius: 3px;
+    border-radius: 3px;
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #38A5EA), color-stop(100%, #106DD7));
+    background-image: -moz-linear-gradient(top, #38A5EA 0%, #106DD7 100%);
+    background-image: linear-gradient(top, #38A5EA 0%, #106DD7 100%);
+    -webkit-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.1), 0px 1px 3px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.1), 0px 1px 3px rgba(0, 0, 0, 0.8);
+    box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.1), 0px 1px 3px rgba(0, 0, 0, 0.8);
+    -webkit-background-clip: padding-box;
+    font-family: Verdana, Arial, Helvetica sans-serif;
+}
+
+.inputButtonSmall {
+    padding: 0 4px 2px 4px;
+    font-size: 12px;
+}
+
+.bigerror {
+    font-size: 26px;
+    color: red;
+}
+
+.inputHint {
+    color: #DDD;
+    font-style: italic;
+}
+
+/* TODO remove this classes: it doesn't make sense to use background when you really just want to add an img tag*/
+.fshare {
+    background: url('../../web/icons/f_icon.png') center left no-repeat;
+    padding: 0 20px 0 20px;
+    display: inline-block;
+    height: 18px;
+    line-height: 18px;
+}
+
+.tshare {
+    background: url('../../web/icons/t_icon.png') center left no-repeat;
+    padding: 0 20px 0 20px;
+    display: inline-block;
+    height: 18px;
+    line-height: 18px;
+}
+
+.lshare {
+    background: url('../../web/icons/l_icon.png') center left no-repeat;
+    padding: 0 20px 0 20px;
+    display: inline-block;
+    height: 18px;
+    line-height: 18px;
+}
+
+.headerMenuLinks {
+    padding: 0 8px 0 20px;
+    display: inline-block;
+    height: 18px;
+    line-height: 18px;
+}
+
+.dash {
+    background: url('../icons/dash.png') center left no-repeat;
+    padding: 0 8px 0 20px;
+    display: inline-block;
+    height: 18px;
+    line-height: 18px;
+}
+
+.myconns {
+    background: url('../icons/group.png') center left no-repeat;
+}
+
+.stats {
+    background: url('../icons/chart_bar.png') center left no-repeat;
+    padding: 0 8px 0 20px;
+    display: inline-block;
+    height: 18px;
+    line-height: 18px;
+}
+
+.lboards {
+    background: url('../icons/award_star_gold_2.png') center left no-repeat;
+    padding: 0 8px 0 20px;
+    display: inline-block;
+    height: 18px;
+    line-height: 18px;
+}
+
+.stats3slink {
+    background: url('../icons/chart_bar.png') center left no-repeat;
+    padding: 0 0 0 20px;
+    display: inline-block;
+    height: 18px;
+    line-height: 18px;
+}
+
+.mystatslink {
+    background: url('../icons/user.png') center left no-repeat;
+    padding: 0 0 0 20px;
+    display: inline-block;
+    height: 18px;
+    line-height: 18px;
+}
+
+.connstatslink {
+    background: url('../icons/group.png') center left no-repeat;
+    padding: 0 0 0 20px;
+    display: inline-block;
+    height: 18px;
+    line-height: 18px;
+}
+
+.statsbullet {
+    background: url('../icons/resultset_next.png') center left no-repeat;
+    padding: 0 8px 0 20px;
+
+    height: 18px;
+    line-height: 18px;
+}
+
+.charthelp {
+    background: url('../icons/help.png') center left no-repeat;
+    padding: 0 8px 0 20px;
+    display: inline-block;
+    height: 18px;
+    line-height: 18px;
+}
+
+.chartdescription {
+    border: 1px solid #b0d4f0;
+    color: #999;
+    background: #f5faff;
+    text-align: left;
+    margin: 0px auto;
+    margin-top: 20px;
+    padding: 5px;
+    font-size: 12px;
+}
+
+.chartdescription p {
+    display: none;
+    padding-left: 20px;
+    color: #aaa;
+}
+
+.logout {
+    background: #333 url('../icons/logout2.png') no-repeat 2px center;
+    border: 1px solid #111;
+    -moz-border-radius: 7px;
+    -webkit-border-radius: 5px;
+    -o-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -khtml-border-radius: 5px;
+    border-radius: 5px;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 5px 5px 5px 20px;
+    text-shadow: none;
+    -moz-box-shadow: 0px 0px 2px #ccc;
+    box-shadow: 0px 0px 2px #ccc;
+    position: relative;
+    top: -2px;
+}
+
+.logout:hover {
+    -moz-box-shadow: 0px 0px 2px #2074c0;
+    box-shadow: 0px 0px 2px #2074c0;
+    background-color: #222;
+}
+
+.datetime {
+    font-size: 10px;
+    color: #c5c5c5;
+}
+
+.errorbox {
+    background-color: #FFDFFD;
+    border: 1px solid #FFAFFA;
+    padding: 8px;
+    padding-left: 25px;
+    border-left: 4px solid #F00;
+    font-weight: bold;
+    background-image: url(../icons/iconerror.gif);
+    background-repeat: no-repeat;
+    background-position: 2px 6px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    font-size: 12px;
+}
+
+.sucessmessage {
+    padding: 8px;
+    padding-left: 25px;
+    font-weight: bold;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #f2fff2;
+    border: 1px solid #ccffcc;
+    background-image: url(../icons/iconsucess.gif);
+    background-repeat: no-repeat;
+    background-position: 2px 6px;
+    border-left: 4px solid #007E00;
+    margin-bottom: 10px;
+    text-align: left;
+    font-size: 12px;
+}
+
+.normalfont {
+    color: #5c5c5c;
+    font: normal 15px "Helvetica Neue", Arial, Helvetica, Verdana, sans-serif;
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.01);
+}
+
+/*
+.normalfont:hover{
+    text-decoration:none;
+}
+*/
+
+.namelink {
+    color: #333;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.nav {
+    display: inline-block;
+    vertical-align: top;
+    width: 25%;
+    -moz-box-shadow: 0 0 5px #b4ccd5;
+    -webkit-box-shadow: 0 0 5px #b4ccd5;
+    box-shadow: 0 0 5px #b4ccd5;
+    background-color: #fff;
+    margin-top: 25px;
+    padding: 10px 14px;
+    color: #2074c0;
+    text-decoration: none;
+}
+
+.nav:hover {
+    background-color: #2074c0;
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.navhover {
+    background-color: #2074c0;
+    color: #fff;
+    cursor: pointer;
+}
+
+.nav2 {
+    float: left;
+    -moz-box-shadow: 0 0 5px #b4ccd5;
+    -webkit-box-shadow: 0 0 5px #b4ccd5;
+    box-shadow: 0 0 5px #b4ccd5;
+    background-color: #fff;
+}
+
+.ie6 #nav2, .ie7 #nav2, .ie8 #nav2 {
+    border: 1px solid #b4ccd5
+}
+
+.nav2 li {
+    float: left;
+    background: url(http://c0364465.cdn2.cloudfiles.rackspacecloud.com/nav-sep.png) 100% 50% no-repeat
+
+}
+
+.nav2 li.last {
+    background: 0;
+}
+
+.nav2 li a {
+    float: left;
+    padding: 10px 14px;
+    color: #2074c0;
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 9pt;
+}
+
+.nav2 li a:hover, .nav2 li.selected a {
+    background-color: #2074c0;
+    color: #fff
+}
+
+.nav2 li a:hover {
+    background-color: #2074c0
+}
+
+.incomptask {
+    background: url('../../web/icons/tick2bw.png') no-repeat left 2px;
+    padding: 0 0 0 20px;
+    height: 18px;
+    line-height: 18px;
+}
+
+.comptask {
+    background: url('../../web/icons/tick2.png') no-repeat left 2px;
+    padding: 0 0 0 20px;
+    height: 18px;
+    line-height: 18px;
+}
+
+/*Generic*/
+
+.center {
+    text-align: center;
+    margin: 0px auto;
+}
+
+.left {
+    text-align: left;
+}
+
+.marginTop60px {
+    margin-top: 60px;
+}
+
+.marginTop40px {
+    margin-top: 40px;
+}
+
+.marginTop30px {
+    margin-top: 30px;
+}
+
+.marginTop20px {
+    margin-top: 20px;
+}
+
+.marginTop10px {
+    margin-top: 10px;
+}
+
+.marginTop5px {
+    margin-top: 5px;
+}
+
+.paddingTop10px {
+    padding-top: 10px;
+}
+
+.paddingTop15px {
+    padding-top: 15px;
+}
+
+.paddingLeft20px {
+    padding-left: 20px;
+}
+
+.margin20px {
+    margin: 20px;
+}
+
+.marginleft15px {
+    margin-left: 15px;
+}
+
+.marginleft20px {
+    margin-left: 20px;
+}
+
+.marginright30px {
+    margin-right: 30px;
+}
+
+.marginpadding0 {
+    margin: 0px;
+    padding: 0px;
+}
+
+.clear {
+    clear: both;
+}
+
+.font28 {
+    font-size: 28px;
+}
+
+.font12 {
+    font-size: 12px;
+}
+
+/* Classes to make fonts a little bit bigger than normal */
+.fontHighlight1 {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.fontHighlight2 {
+    font-size: 20px;
+}
+
+.dark {
+    color: #333;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.undark {
+    color: #a09d9d;
+}
+
+.blue {
+    color: #4086b9;
+}
+
+.lightbluebackground {
+    background: #f4f7fd;
+}
+
+.orange {
+    color: #f57e20;
+}
+
+.lightgreen {
+    color: #c9ffc3;
+}
+
+.smallButton {
+    font-size: 10px;
+    border: 1px solid #CCC;
+    padding: 3px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    border-radius: 5px;
+    position: relative;
+    top: -5px;
+}
+
+/* Form related */
+.mediumInput {
+    width: 400px;
+}
+
+.skillInput {
+    height: 32px;
+}
+
+.floatleft {
+    float: left;
+}
+
+.floatright {
+    float: right;
+}
+
+.lineheight48 {
+    line-height: 48px;
+}
+
+/* Infovis Charts */
+
+#infovis-canvaswidget {
+    margin: 25px 0 0 25px;
+}
+
+#infovis {
+    position: relative;
+    width: 600px;
+    height: 600px;
+    margin: auto;
+    overflow: hidden;
+    background: #333;
+}
+
+/*TOOLTIPS*/
+.tip {
+    color: #4086b9;;
+    font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+}
+
+.ui-progressbar {
+    height: 2em;
+    text-align: center;
+}
+
+.ui-progressbar .ui-progressbar-value {
+    margin: -1px;
+    height: 100%;
+    background: #bef66b;
+    border: 1px solid #82b337;
+}
+
+/* Small boxes that show a picture, profile name and skills */
+
+.boxSmallProfileSkills {
+    text-align: left;
+    padding: 15px;
+}
+
+.boxSmallProfileSkills .photo {
+    width: 60px;
+    float: left;
+}
+
+.boxSmallProfileSkills .content {
+    vertical-align: top;
+    margin-left: 70px;
+    width: 530px;
+    line-height: 30px;
+}
+
+.boxSmallProfileSkills .content p {
+    width: 500px;
+}
+
+.boxSmallProfileRanking {
+    text-align: left;
+    padding: 15px;
+}
+
+.boxSmallProfileRanking .photo {
+    width: 95px;
+    display: inline-block;
+    vertical-align: middle;
+    zoom: 1;
+    *display: inline;
+    color: #72a8db;
+    font-size: 20px;
+    font-weight: normal;
+    text-align: right;
+}
+
+.boxSmallProfileRanking .content {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 5px;
+    line-height: 25px;
+    width: 400px;
+    zoom: 1;
+    *display: inline;
+}
+
+.boxSmallProfileRanking .content p {
+}
+
+.boxLiquidProfile {
+}
+
+.boxLiquidProfile .photo {
+    display: inline-block;
+    width: 20%;
+    zoom: 1;
+    *display: inline;
+}
+
+.boxLiquidProfile .content {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 5px;
+    width: 70%;
+    text-align: left;
+    zoom: 1;
+    *display: inline;
+}
+
+.boxProfile {
+    text-align: left;
+    padding: 15px;
+}
+
+.boxProfile .photo {
+    display: inline-block;
+    vertical-align: middle;
+    zoom: 1;
+    *display: inline;
+}
+
+.boxProfile .content {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 5px;
+    line-height: 25px;
+    width: 500px;
+    zoom: 1;
+    *display: inline;
+}
+
+.boxProfile .content p {
+    color: #c5c5c5;
+    font-size: 14px;
+}
+
+.boxProfile .content p.title {
+    line-height: 20px;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 4px;
+    color: #333;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.boxProfile .content p.title a {
+    color: #333;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.boxProfile .content p.subtitle {
+    color: #5c5c5c;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.boxProfile .content p.subsubtitle {
+    color: #c5c5c5;
+    font-size: 14px;
+}
+
+/* Boxes style 1 */
+
+.boxNormal {
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -o-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -khtml-border-radius: 5px;
+    border-radius: 5px;
+    border-bottom: 1px solid #dedede;
+    background-color: #fff;
+    padding: 15px;
+    padding-bottom: 30px;
+    font-size: 14px;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+
+.boxYellow {
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -o-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -khtml-border-radius: 5px;
+    border-radius: 5px;
+    border-bottom: 1px solid #dedede;
+    padding: 15px;
+    text-align: center;
+    margin: 0px auto;
+    margin-top: 40px;
+
+    background-color: #FBF8E0;
+    font-size: 12px;
+}
+
+.boxYellow p {
+    text-align: left !important;
+    margin: 0;
+}
+
+/* view all connections page*/
+.connectionsInlineBox {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+/* Jquery ui modifications */
+.ui-widget-overlay {
+    background: #aaaaaa url('../../web/img/ui_widget_background_overlay.png') 50% 50% repeat !important;
+}
+
+.ui-progressbar .ui-progressbar-value {
+    background-image: url('../../web/img/progress_bar_background.png');
+}
+
+/* */
+.noMarginPadding {
+    margin: 0;
+    padding: 0;
+}
+
+.helpIcon {
+    vertical-align: text-bottom;
+}
+
+.helpIcon:hover {
+    cursor: help;
+}
