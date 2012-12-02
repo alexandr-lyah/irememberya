@@ -188,6 +188,7 @@ function showJobCorrect(correct, clickedButton) {
 function showCompanyCorrect(correct, clickedButton) {
 	console.log("showCompanyCorrect correct compy: " + correct);
 	$('#continuecompanybutton').show();
+	$('#continuecompanybutton').css("visibility", "visible");
 	console.log("clickedButton:" + clickedButton);
 	var classname = "correctbutton";
 	var scoreChange = 1;
