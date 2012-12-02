@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.0.7, created on 2012-12-02 02:32:03
+<?php /* Smarty version Smarty-3.0.7, created on 2012-12-02 04:04:47
          compiled from "tpl/header.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:208185754650baaf93a28536-56460143%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:176417922350bac54fb04e08-28016899%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -11,14 +11,14 @@ $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '208185754650baaf93a28536-56460143',
+  'nocache_hash' => '176417922350bac54fb04e08-28016899',
   'function' => 
   array (
   ),
   'has_nocache_code' => false,
 )); /*/%%SmartyHeaderCode%%*/?>
-<?php if (!is_callable('smarty_function_errorsucess')) include '/Applications/MAMP/htdocs/irememberya/app/www/lib/smarty/plugins/function.errorsucess.php';
-if (!is_callable('smarty_block_auth')) include '/Applications/MAMP/htdocs/irememberya/app/www/lib/smarty/plugins/block.auth.php';
+<?php if (!is_callable('smarty_function_errorsucess')) include '/Applications/MAMP/htdocs/irememberya/www/lib/smarty/plugins/function.errorsucess.php';
+if (!is_callable('smarty_block_auth')) include '/Applications/MAMP/htdocs/irememberya/www/lib/smarty/plugins/block.auth.php';
 ?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">

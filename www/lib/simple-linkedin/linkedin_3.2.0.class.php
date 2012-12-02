@@ -256,11 +256,11 @@ class LinkedIn {
 	private function checkResponse($http_code_required, $response) {
 		// check passed data
     if(is_array($http_code_required)) {
-		  array_walk($http_code_required, function($value, $key) {
-        if(!is_int($value)) {
-    			throw new LinkedInException('LinkedIn->checkResponse(): $http_code_required must be an integer or an array of integer values');
-    		}
-      });
+    foreach ($http_code_required as $value) {
+    if(!is_int($value)) {
+        throw new LinkedInException('LinkedIn->checkResponse(): $http_code_required must be an integer or an array of integer values');
+    }
+}
 		} else {
 		  if(!is_int($http_code_required)) {
   			throw new LinkedInException('LinkedIn->checkResponse(): $http_code_required must be an integer or an array of integer values');

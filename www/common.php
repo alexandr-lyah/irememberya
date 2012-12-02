@@ -1,6 +1,5 @@
 <?php
 require_once('../config.php');
-require_once('../mysql.php');
 ini_set('default_charset', 'UTF-8');
 header('Content-Type: text/html; charset=UTF-8');
 
@@ -16,7 +15,8 @@ else{
 }
 
 ini_set('include_path', ini_get('include_path') . PATH_SEPARATOR . 'lib/oauth' . PATH_SEPARATOR . 'lib/smarty');
-require_once('lib/simple-linkedin/linkedin_3.0.1.class.php');
+//require_once('lib/simple-linkedin/linkedin_3.0.1.class.php');
+require_once('lib/simple-linkedin/linkedin_3.2.0.class.php');
 require_once('include/functions.php');
 require_once('include/functionsLI.php');
 require_once('include/loggers.php');
@@ -24,7 +24,7 @@ require_once('include/hooks.php');
 require_once('include/db.php');
 require_once('include/enums.php');
 
-session_name("top3skills");
+session_name("irememberya");
 session_set_cookie_params(2592000); // keep it for a month
 session_start();
 

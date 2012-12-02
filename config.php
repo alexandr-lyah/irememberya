@@ -1,12 +1,4 @@
-<?PHP
-
-$env =  json_decode(file_get_contents("/home/dotcloud/environment.json"));
-$user = $env->DOTCLOUD_DB_MYSQL_LOGIN;
-$password = $env->DOTCLOUD_DB_MYSQL_PASSWORD; 
-$host = $env->DOTCLOUD_DB_MYSQL_HOST;
-$port = $env->DOTCLOUD_DB_MYSQL_PORT;
-$dbname = 'test';
-
+<?php
 
 $dbType = 'mysql';   // what driver to use to connect
 $dbName = "irememberya";
@@ -18,7 +10,7 @@ $template_dir = "tpl";
 
 $production = false; 
 
-$path = "";
+$path = "/Applications/MAMP/htdocs/irememberya/";
 
 $API_CONFIG = array(
     'appKey' => 'g_DtCVfd8F0RBKI_sh1jysUeA4Z8MjPNLFYzmENSeNEd7ZjKPDFffLCuiKaaH2W0',
@@ -28,7 +20,6 @@ $API_CONFIG = array(
 
 $salt = 'lkjlhy5678iuo123';
 
-$domain = 'http://top3skills.com/';
-$domainLocal = 'http://localhost/'
-
+$domain = 'http://irememberya.com/';
+$domainLocal = 'http://localhost/irememberya/www/'
 ?>
