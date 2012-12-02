@@ -1,4 +1,4 @@
-<div class="content center">
+<div class="content center" >
 
 	<div id="picturequestion">
 	  <div class="rounded center marginTop40px" style="width:70%;">
