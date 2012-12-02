@@ -7,9 +7,17 @@ var company_right = "AngelList";
 var company_wrong = "Ebay";
 var score = 0;
 
+//for buggy hide/show
+var hasReachedEnd = true;
+
 function getNextData() {
-	console.log("getNextData")
+	console.log("getNextData, hasReachedEnd = " + hasReachedEnd)
+	if(!hasReachedEnd) {
+		console.log("break!! " + hasReachedEnd);
+		//return;
+	}
 	$.getJSON('details.php', function(data) {
+		console.log("new data loaded");
 		var items = [];
 		$.each(data, function(key, val) {
 			if(key =="cool") {
@@ -18,13 +26,14 @@ function getNextData() {
 						name = val2
 					}
 					else if(key2 == "pic") {
-						pictureurl_right = val2
+						pictureurl_right = val2;
 					}
 					else if(key2 == "job") {
-						job_right = val2
+						job_right = val2;
 					}
 					else if(key2 == "company") {
-						company_right = val2
+						company_right = val2;
+						console.log("company_right = " + company_right);
 					}
 				});
 			}
@@ -37,12 +46,16 @@ function getNextData() {
 						job_wrong = val2
 					}
 					else if(key2 == "company") {
-						company_wrong = val2
+						company_wrong = val2;
+						console.log("company_wrong = " + company_wrong);
+						if (company_wrong == null) {
+							company_wrong = "Disney";
+						}
 					}
 				});
 			}
 	  });
-		updateInfo();
+		updateInitialInfo();
 	})
 }
 
@@ -86,17 +99,19 @@ $(document).ready(function(){
 	});
 	
 	$(".reconnectbutton").click(function() {
+		console.log("reconnect button class clicked");
 		refresh();
 		getNextData();
 	});
 });
 
 function pictureIsCorrect(pictureSrc) {
-	console.log(" pictureSrc = " + pictureSrc)
+	//console.log(" pictureSrc = " + pictureSrc)
 	return pictureSrc == pictureurl_right;
 }
 
-function updateInfo() {
+function updateInitialInfo() {
+	hasReachedEnd = false;
 	$('#namecontainer').html(name);
 	if(randomBoolean()) {
 		$('#picright').attr("src", pictureurl_right);
@@ -109,7 +124,6 @@ function updateInfo() {
 }
 
 function showJobQuestion() {
-	//$("#titlequestion").css("visibility", "visible");
 	$("#titlequestion").show();
 	$('#titlepiccorrect').attr("src", pictureurl_right);
 	$('#namecorrect').html(name);
@@ -140,12 +154,10 @@ function companyIsCorrect(company) {
 
 function showCompanyQuestion() {
 	console.log("showCompanyQuestion");
-	//update right question
 	$('#titlecompanyquestion').html("What is their company?");
 	$('#jobcorrect').html(job_right);
 	$('.personjob').hide();
 	$('#continuejobbutton').hide();
-	
 	if(randomBoolean()) {
 		$('#companyone').html(company_wrong);
 		$('#companytwo').html(company_right);
@@ -154,10 +166,10 @@ function showCompanyQuestion() {
 		$('#companyone').html(company_right);
 		$('#companytwo').html(company_wrong);
 	}
+	console.log("$('#companyone').html = " + $('#companyone').html() + ", company_wrong = " + company_wrong);
+	console.log("$('#companytwo').html = " + $('#companytwo').html() + ", company_right = " + company_right);
 	$('.personcompany').show();
-	
-	//hide buttons title
-	//show buttons company
+
 }
 
 function showJobCorrect(correct, clickedButton) {
@@ -168,13 +180,13 @@ function showJobCorrect(correct, clickedButton) {
 		scoreChange = -1;
 	}
 	$(clickedButton).addClass(classname);
-	$('#continuejobbutton').css("visibility", "visible");
+	$('#continuejobbutton').show();
 	updateScore(scoreChange);
 }
 
 function showCompanyCorrect(correct, clickedButton) {
-	//alert("correct compy: " + correct);
-	//$('#continuecompanybutton').show();
+	console.log("showCompanyCorrect correct compy: " + correct);
+	$('#continuecompanybutton').show();
 	console.log("clickedButton:" + clickedButton);
 	var classname = "correctbutton";
 	var scoreChange = 1;
@@ -183,12 +195,13 @@ function showCompanyCorrect(correct, clickedButton) {
 		scoreChange = -1;
 	}
 	$(clickedButton).addClass(classname);
-	$('#continuecompanybutton').css("visibility", "visible");
+	//$('#continuecompanybutton').css("visibility", "visible");
 	updateScore(scoreChange);
+	hasReachedEnd = true;
+	console.log("hasReachedEnd = " + hasReachedEnd);
 }
 
 function showEndResult() {
-	//alert("end!");
 	$('#titlequestion').hide();
 	$('#picright2').attr("src", pictureurl_right);
 	
@@ -197,6 +210,7 @@ function showEndResult() {
 	$('#reconnectcompany').html(company_right);
 	
 	$('#getintouchquestion').show();
+	$('.reconnectbutton').show();
 }
 
 function updateScore(scoreChange) {
@@ -205,18 +219,26 @@ function updateScore(scoreChange) {
 }
 
 function refresh() {
+	
 	$('#picturequestion').show();
 	$('#titlequestion').hide();
 	$('#getintouchquestion').hide();
+	$('.reconnectbutton').hide();
 	$('#continuepicturebutton').hide();
 	$('.personcompany').removeClass("correctbutton");
 	$('.personcompany').removeClass("incorrectbutton");
+	//$('.personcompany').html('');
+	
 	$('.personjob').removeClass("correctbutton");
 	$('.personjob').removeClass("incorrectbutton");
+	//$('.personjob').html('');
+	
 	$('#leftprofilepicframe').removeClass("picclickedright");
 	$('#rightprofilepicframe').removeClass("picclickedright");
 	$('#leftprofilepicframe').removeClass("picclickedwrong");
 	$('#rightprofilepicframe').removeClass("picclickedwrong");
+	
 	$('#reconnectinfo').children().html('');
 	$('.beneathpictext').html('');
+	
 }
