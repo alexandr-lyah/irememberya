@@ -43,6 +43,10 @@
 	visibility:hidden;
 }
 
+.nodisplay {
+	display:none;
+}
+
 .profilepicinnerframe {
 	margin-left:20px;
 	margin-top:20px;
@@ -51,25 +55,56 @@
 }
 
 .leftcolumn {
-	background-color:red;
+	xbackground-color:red;
 	float:left;
 	width:250px;
 	height:300px;
 }
 
 .rightcolumn {
-	background-color:orange;
+	xbackground-color:orange;
 	width:200px;
 	margin-left:200px;
 }
 
-.persontitle {
-	background-color:gray;
+.personjob {
+	background-color:#eee;
 	width:160px;
 	height:60px;
 	padding:20px;
 	font-size:18px;
 	margin-bottom:20px;
-	cursor: pointer
+	cursor: pointer;
+	-moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -khtml-border-radius: 10px;
+    border-radius: 10px;
+}
+
+.personcompany {
+	background-color:#eee;
+	width:160px;
+	height:60px;
+	padding:20px;
+	font-size:18px;
+	margin-bottom:20px;
+	cursor: pointer;
+	-moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -khtml-border-radius: 10px;
+    border-radius: 10px;
+}
+
+.beneathpictext {
+	font-size:19px;
+	margin-top:20px;
+}
+
+.correctbutton {
+	background-color:green;
+}
+
+.incorrectbutton {
+	background-color:red;
 }
 
