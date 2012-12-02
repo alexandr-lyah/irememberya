@@ -57,6 +57,7 @@
 
     <!-- Social Libs -->
     <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+		<script type="text/javascript" src="{$baseUrl}web/js/choosepic.js"></script>
 
 	{include file="headercommon.tpl"}
 
