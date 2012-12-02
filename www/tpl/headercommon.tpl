@@ -1,21 +1,21 @@
 {if $currentPage == $PAGES.PUBLIC_PROFILE}
-    <meta property="og:title" content="Top3Skills.com - {$user.firstname} {$user.lastname}"/>
+    <meta property="og:title" content="irememberya.com - {$user.firstname} {$user.lastname}"/>
     <meta property="og:url" content="http://{$smarty.server.SERVER_NAME}{$smarty.server.REQUEST_URI}"/>
     <meta property="og:image" content="{$user.pictureUrl}"/>
-    <meta property="og:description" content="What are my Top 3 Skills and professional strengths? Tell me at http://Top3Skills.com/{$user.username}"/>
+    <meta property="og:description" content="What are my Top 3 Skills and professional strengths? Tell me at http://irememberya.com/{$user.username}"/>
 
     <link rel="image_src" type="image/png" href="{$user.pictureUrl}" />    
-    <meta name="description" content="What are my Top 3 Skills and professional strengths? Tell me at http://Top3Skills.com/{$user.username}" />
+    <meta name="description" content="What are my Top 3 Skills and professional strengths? Tell me at http://irememberya.com/{$user.username}" />
 {else}
     <meta property="og:title" content="Top 3 Skills"/>
-    <meta property="og:url" content="http://top3skills.com"/>
-    <meta property="og:image" content="http://top3skills.com/tpl/img/t3s100_100.png"/>
-    <meta property="og:description" content="Top3Skills.com - the Quick Recommendations Service.
+    <meta property="og:url" content="http://irememberya.com"/>
+    <meta property="og:image" content="http://irememberya.com/tpl/img/t3s100_100.png"/>
+    <meta property="og:description" content="irememberya.com - the Quick Recommendations Service.
     Ask your connections to write the Top 3 Skills and professional strengths that best describe you."/>
 
-    <meta name="description" content="Top3Skills.com - the Quick Recommendations Service.
+    <meta name="description" content="irememberya.com - the Quick Recommendations Service.
     Ask your connections to write the Top 3 Skills and professional strengths that best describe you." />
-    <link rel="image_src" type="image/png" href="http://top3skills.com/tpl/img/t3s100_100.png" />
+    <link rel="image_src" type="image/png" href="http://irememberya.com/tpl/img/t3s100_100.png" />
 {/if}
 
 <meta property="og:type" content="website"/>
