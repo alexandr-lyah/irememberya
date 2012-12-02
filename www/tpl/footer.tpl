@@ -1,5 +1,5 @@
 
-
+<!-- 
 <div id="footer" class="center">
 	<a href="about.php" class="footerlink">About</a> |
     <a href="about.php" class="footerlink">Contact</a>
@@ -10,19 +10,7 @@
     <a target="_blank" href="http://facebook.com/top3skills">
         <img src="web/icons/f_icon.png"  width="18" height="18" /></a>
 </div>
+ -->
 
-
-{literal}
-<script type="text/javascript">
-    $(document).ready(function(){
-        attachBoxHoverEffect();
-    });
-
-    $('#contact').contactable({
- 		subject: 'A Feeback Message'
- 	});
- 	
-</script>
-{/literal}
 </body>
 </html>

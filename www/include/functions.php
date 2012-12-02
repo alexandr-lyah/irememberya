@@ -1,5 +1,50 @@
 <?php
 
+
+function retrieveRandomConnection($linkedinId){
+	
+   $randomuser = select("SELECT friend_li_id FROM users_friends uf, users u WHERE uf.friend_li_id = u.linkedin_id and pictureUrl not like '%no_photo%' and user_li_id = ? and headline like '%at%' and done = 0 ORDER BY RAND() LIMIT 0,1", array($linkedinId));
+   $randomuserId = $randomuser[0]['friend_li_id'];
+   update("update users_friends set done = 1 where friend_li_id = ? and user_li_id = ? ", array($randomuser[0]['friend_li_id'],$linkedinId));
+   $randomuser2 = select("SELECT friend_li_id FROM users_friends uf, users u WHERE uf.friend_li_id = u.linkedin_id and pictureUrl not like '%no_photo%' and user_li_id = ? and friend_li_id <> ? ORDER BY RAND() LIMIT 0,1", array($linkedinId, $randomuserId));
+   $randomuserId2 =  $randomuser2[0]['friend_li_id'];
+   
+   $user1 = getUserLimited($randomuserId);
+   $user1Final = array();
+   $user1Final['pic'] = $user1['pictureUrl']; 
+   $pieces = explode("at", $user1['headline']);
+   $user1Final['name'] = $user1['firstname']. ' '. $user1['lastname'];
+   $user1Final['job'] = $pieces[0];
+   $user1Final['company'] = $pieces[1];   
+   
+   if(!isset($user1))
+   	return 0; 
+   
+   $user2 = getUserLimited($randomuserId2);
+   $user2Final = array();
+   $user2Final['pic'] = $user2['pictureUrl']; 
+   $pieces = explode("at", $user2['headline']);
+   $user2Final['job'] = $pieces[0];
+   $user2Final['company'] = $pieces[1];
+   
+   $users = array("cool" => $user1Final, "notcool" => $user2Final);
+   
+   return json_encode($users);
+}
+
+function getUserLimited($linkedinId) {
+    $users = select("SELECT firstname, lastname, pictureUrl, publicProfileUrl, headline FROM users WHERE linkedin_id = ? and headline like '%at%'", array($linkedinId));
+    if (count($users) > 0) {
+        return $users[0];
+    }
+
+    return null;
+}
+
+
+
+
+
 function checkPermissions() {
     global $salt;
 
@@ -37,15 +82,6 @@ function checkPermissions() {
 
         header("Location: login.php" . $url_safe);
         exit();
-    }
-
-    // Check if the user is trying to get to another page without going through the register page
-    if (isset($_SESSION['userId']) && empty($_SESSION['user']['email'])) {
-        $pos = strpos(strtolower($_SERVER['PHP_SELF']), 'register.php');
-        if ($pos === false) {
-            header("Location: register.php");
-            exit();
-        }
     }
 
     return true;

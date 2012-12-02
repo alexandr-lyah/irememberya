@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.7, created on 2012-12-02 04:04:47
+<?php /* Smarty version Smarty-3.0.7, created on 2012-12-02 09:28:19
          compiled from "tpl/header.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:176417922350bac54fb04e08-28016899%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:102626007850bb1123b7b0e8-41757265%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'c6b2c89853c96e0b9a9bc209d3c3f51e9525ed10' => 
     array (
       0 => 'tpl/header.tpl',
-      1 => 1311781233,
+      1 => 1354436882,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '176417922350bac54fb04e08-28016899',
+  'nocache_hash' => '102626007850bb1123b7b0e8-41757265',
   'function' => 
   array (
   ),
@@ -96,6 +96,9 @@ web/js/thejit/jit-yc.js"></script>
 web/js/jquery.textbox-hinter.js"></script>
     <script type="text/javascript" src="<?php echo $_smarty_tpl->getVariable('baseUrl')->value;?>
 web/js/jquery.topbar.js"></script>
+	
+	<script type="text/javascript"> var $name = <?php echo $_smarty_tpl->getVariable('users')->value;?>
+; </script>
 
     <link rel="stylesheet" type="text/css" href="web/js/jqplot/jquery.jqplot.min.css"/>
 

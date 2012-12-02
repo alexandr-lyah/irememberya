@@ -33,7 +33,7 @@
 	{include file="headercommon.tpl"}
 
 </head>
-<body>
+<body style=" background: #4aa9df;">
 {errorsucess}
 
 <div id="header" class="headerIndex" >
@@ -70,7 +70,7 @@
             <a href="logout.php" class="logout">Logout</a>
         {/auth}
         </div>
-        <div class="marginleft15px"><a href="{auth default="index.php"}dashboard.php{/auth}"><img class="logo" src="tpl/img/logo.png"/></a>
+      <!--   <div class="marginleft15px"><a href="{auth default="index.php"}dashboard.php{/auth}"><img class="logo" src="tpl/img/logo.png"/></a>  -->
         </div>
     </div>
 </div>

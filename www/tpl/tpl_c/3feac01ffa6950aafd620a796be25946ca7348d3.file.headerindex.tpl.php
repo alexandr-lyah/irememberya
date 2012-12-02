@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.7, created on 2012-12-02 04:01:01
+<?php /* Smarty version Smarty-3.0.7, created on 2012-12-02 09:01:24
          compiled from "tpl/headerindex.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:208740477650bac46de2dda5-48115337%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:213920965050bb0ad43f9e28-49089146%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '3feac01ffa6950aafd620a796be25946ca7348d3' => 
     array (
       0 => 'tpl/headerindex.tpl',
-      1 => 1311781233,
+      1 => 1354426980,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '208740477650bac46de2dda5-48115337',
+  'nocache_hash' => '213920965050bb0ad43f9e28-49089146',
   'function' => 
   array (
   ),
@@ -60,7 +60,7 @@ web/js/contactable/jquery.contactable.min.js"></script>
  echo $_template->getRenderedTemplate();?><?php unset($_template);?>
 
 </head>
-<body>
+<body style=" background: #4aa9df;">
 <?php echo smarty_function_errorsucess(array(),$_smarty_tpl);?>
 
 
@@ -101,9 +101,9 @@ web/js/contactable/jquery.contactable.min.js"></script>
         <?php $_block_content = ob_get_clean(); $_block_repeat=false; echo smarty_block_auth(array(), $_block_content, $_smarty_tpl, $_block_repeat);  } array_pop($_smarty_tpl->smarty->_tag_stack);?>
 
         </div>
-        <div class="marginleft15px"><a href="<?php $_smarty_tpl->smarty->_tag_stack[] = array('auth', array('default'=>"index.php")); $_block_repeat=true; smarty_block_auth(array('default'=>"index.php"), null, $_smarty_tpl, $_block_repeat);while ($_block_repeat) { ob_start();?>
+      <!--   <div class="marginleft15px"><a href="<?php $_smarty_tpl->smarty->_tag_stack[] = array('auth', array('default'=>"index.php")); $_block_repeat=true; smarty_block_auth(array('default'=>"index.php"), null, $_smarty_tpl, $_block_repeat);while ($_block_repeat) { ob_start();?>
 dashboard.php<?php $_block_content = ob_get_clean(); $_block_repeat=false; echo smarty_block_auth(array('default'=>"index.php"), $_block_content, $_smarty_tpl, $_block_repeat);  } array_pop($_smarty_tpl->smarty->_tag_stack);?>
-"><img class="logo" src="tpl/img/logo.png"/></a>
+"><img class="logo" src="tpl/img/logo.png"/></a>  -->
         </div>
     </div>
 </div>

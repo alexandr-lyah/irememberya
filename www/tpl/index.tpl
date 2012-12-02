@@ -1,15 +1,15 @@
 <div class="banner">
-			<div class="contentindex center bannersun paddingTop15px" style="background-position:center top;">
+			<div class="contentindex center bannersun paddingTop15px" style="background-position:center top; padding-top:50px;">
 			
 			        <h1>
-			            What are your Top 3 Skills?
+			            iRememberYa! 
 			        </h1>
 				
 			        <p class="indexp">
-			            Kindly ask your connections to write the Top 3 Skills and professional strengths that best describe you
+			            Learn and Refresh your Social Network
 			        </p>
 			
-			        <p class="center loginbuttondiv" id="lconn">
+			        <p class="center loginbuttondiv marginTop40px" id="lconn">
 			            <a id="lconnlink" href="{if isset($smarty.session.userId)}dashboard.php{else}register.php{/if}" onclick="$(this).parent().hide(); $('#loadinglin').show();"><img alt="" style="vertical-align: middle;"
 			                                                                                                  src="tpl/img/loginbutton.png"
 			                                                                                                  class="loginButton _boxHover"/></a>				        				        
@@ -23,7 +23,7 @@
 			        
 			</div>
 </div>
-
+<!-- 
 <div class="contentindex center marginTop20px">
     <p style="margin-bottom:15px;">
     	<i><strong>Top3Skills.com - the Quick Recommendations Service</strong></i>
@@ -56,4 +56,4 @@
         </tr>
     </table>
 </div>
- 
+-->

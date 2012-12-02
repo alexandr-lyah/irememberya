@@ -78,17 +78,20 @@ function getLIFriendsData($modifiedSince = -1) {
 
     if ($modifiedSince == -1) {
         $response =
-                $li->connections('~/connections:' . $liFilterFullUserData . '?start=0');
+                $li->connections('~/connections:' . $liFilterFullUserData . '?start=0&count=50');
     }
     else {
         $modifiedSince = $modifiedSince . "000";
         $response =
                 $li->connections(
-                    '~/connections:' . $liFilterFullUserData . '?modified-since=' . $modifiedSince . '');
+                    '~/connections:' . $liFilterFullUserData . '?modified-since=' . $modifiedSince . '&count=50');
 
     }
-    logXML("modified since " . $modifiedSince);
-    logXML($response['linkedin']);
+  //  logXML("modified since " . $modifiedSince);
+  //  logXML($response['linkedin']);
+  
+   // print_r($response);
+   //  exit();
     $connections = new SimpleXMLElement($response['linkedin']);
 
     $friends = array ();
@@ -101,6 +104,7 @@ function getLIFriendsData($modifiedSince = -1) {
                             'location' => $person->location->name, 'skills' => $person->skills,
                             'positions' => $person->positions);
     }
+    
     return $friends;
 }
 

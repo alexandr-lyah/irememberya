@@ -1,7 +1,6 @@
 <?php
 require_once('common.php');
 
-
 // user initiated LinkedIn connection, create the LinkedIn object
 $API_CONFIG['callbackUrl'] =
         'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['PHP_SELF'] . '?' . LINKEDIN::_GET_TYPE . '=initiate&' .
@@ -27,12 +26,12 @@ if (!$_GET[LINKEDIN::_GET_RESPONSE]) {
         //echo $API_CONFIG['callbackUrl'];
         header('Location: ' . LINKEDIN::_URL_AUTH . $_SESSION['oauth']['linkedin']['request']['oauth_token']);
     } else {
-        /*
+        
         // bad token request
         echo"Request token retrieval failed:<br /><br />RESPONSE:<br /><br /><pre>" . print_r($response, TRUE) .
                 "</pre><br /><br />LINKEDIN OBJ:<br /><br /><pre>" . print_r($OBJ_linkedin, TRUE) . "</pre>";
 
-         */
+         
         error_log("Request token retrieval failed:<br /><br />RESPONSE:<br /><br /><pre>" . print_r($response, TRUE) .
                 "</pre><br /><br />LINKEDIN OBJ:<br /><br /><pre>" . print_r($OBJ_linkedin, TRUE) . "</pre>");
         header("Location: index.php");

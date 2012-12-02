@@ -51,6 +51,8 @@
     <script type="text/javascript" src="{$baseUrl}web/js/thejit/jit-yc.js"></script>
     <script type="text/javascript" src="{$baseUrl}web/js/jquery.textbox-hinter.js"></script>
     <script type="text/javascript" src="{$baseUrl}web/js/jquery.topbar.js"></script>
+	
+	{literal}<script type="text/javascript"> var $name = {/literal}{$users}{literal}; </script>{/literal}
 
     <link rel="stylesheet" type="text/css" href="web/js/jqplot/jquery.jqplot.min.css"/>
 

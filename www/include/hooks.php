@@ -17,6 +17,7 @@ class Hooks {
 
             $user = getUser($_SESSION['linkedinId']);
 
+            
             // synch linkedin friends
             $friends = getLIFriends();
             foreach ($friends as $friend) {
@@ -28,7 +29,7 @@ class Hooks {
                     insert("insert into users_friends (user_li_id, friend_li_id) VALUES(?,?) ",
                         array($_SESSION['linkedinId'], $friend));
                 }
-            }
+            } 
 
         }
 

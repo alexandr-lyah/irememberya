@@ -13,8 +13,8 @@ $production = false;
 $path = "/Applications/MAMP/htdocs/irememberya/";
 
 $API_CONFIG = array(
-    'appKey' => 'g_DtCVfd8F0RBKI_sh1jysUeA4Z8MjPNLFYzmENSeNEd7ZjKPDFffLCuiKaaH2W0',
-    'appSecret' => '-G9HCdamSgj8FiZVlAZdZMilTBryrtTyhVIgh52enfoLH2qWo9F-UPT2iDAHcOJO',
+    'appKey' => 'cht0uqocj5vd',
+    'appSecret' => 'sSv7WXq7XCMM9FzO',
     'callbackUrl' => NULL
 );
 

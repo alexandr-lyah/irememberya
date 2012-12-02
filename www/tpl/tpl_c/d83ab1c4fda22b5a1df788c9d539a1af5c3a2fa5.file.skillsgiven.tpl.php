@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.0.7, created on 2011-05-18 22:54:35
+<?php /* Smarty version Smarty-3.0.7, created on 2012-12-02 09:18:27
          compiled from "tpl/skillsgiven.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:11949755474dd4866ba95de4-44428673%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:135861041450bb0ed36bcb21-28625731%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -11,13 +11,13 @@ $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '11949755474dd4866ba95de4-44428673',
+  'nocache_hash' => '135861041450bb0ed36bcb21-28625731',
   'function' => 
   array (
   ),
   'has_nocache_code' => false,
 )); /*/%%SmartyHeaderCode%%*/?>
-<?php if (!is_callable('smarty_function_cycle')) include '/home/tascaco/top3skills.com/www/lib/smarty/plugins/function.cycle.php';
+<?php if (!is_callable('smarty_function_cycle')) include '/Applications/MAMP/htdocs/irememberya/www/lib/smarty/plugins/function.cycle.php';
 ?><div class="rounded center marginTop40px" style="width:90%;">
     <h3><?php echo $_smarty_tpl->getVariable('LANG')->value['connections3SkillsByMe'];?>
 </h3>

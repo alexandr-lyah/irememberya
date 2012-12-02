@@ -1,34 +1,34 @@
-<?php /* Smarty version Smarty-3.0.7, created on 2012-12-02 04:01:02
+<?php /* Smarty version Smarty-3.0.7, created on 2012-12-02 09:01:24
          compiled from "tpl/index.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:38175432150bac46e0b6f92-85800649%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:66166335550bb0ad468f984-91454507%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '33239c84de49b23b7fa2dd5fded24dcd2c7ab90c' => 
     array (
       0 => 'tpl/index.tpl',
-      1 => 1305773447,
+      1 => 1354427218,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '38175432150bac46e0b6f92-85800649',
+  'nocache_hash' => '66166335550bb0ad468f984-91454507',
   'function' => 
   array (
   ),
   'has_nocache_code' => false,
 )); /*/%%SmartyHeaderCode%%*/?>
 <div class="banner">
-			<div class="contentindex center bannersun paddingTop15px" style="background-position:center top;">
+			<div class="contentindex center bannersun paddingTop15px" style="background-position:center top; padding-top:50px;">
 			
 			        <h1>
-			            What are your Top 3 Skills?
+			            iRememberYa! 
 			        </h1>
 				
 			        <p class="indexp">
-			            Kindly ask your connections to write the Top 3 Skills and professional strengths that best describe you
+			            Learn and Refresh your Social Network
 			        </p>
 			
-			        <p class="center loginbuttondiv" id="lconn">
+			        <p class="center loginbuttondiv marginTop40px" id="lconn">
 			            <a id="lconnlink" href="<?php if (isset($_SESSION['userId'])){?>dashboard.php<?php }else{ ?>register.php<?php }?>" onclick="$(this).parent().hide(); $('#loadinglin').show();"><img alt="" style="vertical-align: middle;"
 			                                                                                                  src="tpl/img/loginbutton.png"
 			                                                                                                  class="loginButton _boxHover"/></a>				        				        
@@ -42,7 +42,7 @@ $_smarty_tpl->decodeProperties(array (
 			        
 			</div>
 </div>
-
+<!-- 
 <div class="contentindex center marginTop20px">
     <p style="margin-bottom:15px;">
     	<i><strong>Top3Skills.com - the Quick Recommendations Service</strong></i>
@@ -75,4 +75,4 @@ $_smarty_tpl->decodeProperties(array (
         </tr>
     </table>
 </div>
- 
+-->
