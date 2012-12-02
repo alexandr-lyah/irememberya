@@ -3,34 +3,41 @@
 
 function retrieveRandomConnection($linkedinId){
 	
-   $randomuser = select("SELECT friend_li_id FROM users_friends uf, users u WHERE uf.friend_li_id = u.linkedin_id and pictureUrl not like '%no_photo%' and user_li_id = ? and headline like '%at%' and done = 0 ORDER BY RAND() LIMIT 0,1", array($linkedinId));
-   $randomuserId = $randomuser[0]['friend_li_id'];
-   update("update users_friends set done = 1 where friend_li_id = ? and user_li_id = ? ", array($randomuser[0]['friend_li_id'],$linkedinId));
-   $randomuser2 = select("SELECT friend_li_id FROM users_friends uf, users u WHERE uf.friend_li_id = u.linkedin_id and pictureUrl not like '%no_photo%' and user_li_id = ? and friend_li_id <> ? ORDER BY RAND() LIMIT 0,1", array($linkedinId, $randomuserId));
-   $randomuserId2 =  $randomuser2[0]['friend_li_id'];
-   
-   $user1 = getUserLimited($randomuserId);
-   $user1Final = array();
-   $user1Final['pic'] = $user1['pictureUrl']; 
-   $pieces = explode("at", $user1['headline']);
-   $user1Final['name'] = $user1['firstname']. ' '. $user1['lastname'];
-   $user1Final['job'] = $pieces[0];
-   $user1Final['company'] = $pieces[1];   
+   $randomuser = '';
+   do{
+	   $randomuser = select("SELECT friend_li_id FROM users_friends uf, users u WHERE uf.friend_li_id = u.linkedin_id and pictureUrl not like '%no_photo%' and user_li_id = ? and headline like '% at %' and done = 0 ORDER BY RAND() LIMIT 0,1", array($linkedinId));
+	   $randomuserId = $randomuser[0]['friend_li_id'];
+	   $user1 = getUserLimited($randomuserId);
+	   $user1Final = array();
+	   $user1Final['pic'] = $user1['pictureUrl']; 
+	   $pieces = explode("at", $user1['headline']);
+	   $user1Final['name'] = $user1['firstname']. ' '. $user1['lastname'];
+	   $user1Final['job'] = $pieces[0];
+	   $user1Final['company'] = $pieces[1];
+   }while(isset($user1Final['pic']) && ($user1Final['pic'] == null || $user1Final['pic'] == ''));
       
-   $user2 = getUserLimited($randomuserId2);
-   $user2Final = array();
-   $user2Final['pic'] = $user2['pictureUrl']; 
-   $pieces = explode("at", $user2['headline']);
-   $user2Final['job'] = $pieces[0];
-   $user2Final['company'] = $pieces[1];
+   update("update users_friends set done = 1 where friend_li_id = ? and user_li_id = ? ", array($randomuser[0]['friend_li_id'],$linkedinId));
+
+   $randomuser2 = '';
+   do{
+   		$randomuser2 = select("SELECT friend_li_id FROM users_friends uf, users u WHERE uf.friend_li_id = u.linkedin_id and pictureUrl not like '%no_photo%' and user_li_id = ? and headline like '% at %' and friend_li_id <> ? ORDER BY RAND() LIMIT 0,1", array($linkedinId, $randomuserId));
+   		$randomuserId2 =  $randomuser2[0]['friend_li_id'];
+   		$user2 = getUserLimited($randomuserId2);
+   		$user2Final = array();
+	   $user2Final['pic'] = $user2['pictureUrl']; 
+	   $pieces = explode("at", $user2['headline']);
+	   $user2Final['job'] = $pieces[0];
+	   $user2Final['company'] = $pieces[1];   
    
+   }while(isset($user2Final['pic']) && ($user2Final['pic'] == null || $user2Final['pic'] == ''));
+ 
    $users = array("cool" => $user1Final, "notcool" => $user2Final);
    
    return json_encode($users);
 }
 
 function getUserLimited($linkedinId) {
-    $users = select("SELECT firstname, lastname, pictureUrl, publicProfileUrl, headline FROM users WHERE linkedin_id = ? and headline like '%at%'", array($linkedinId));
+    $users = select("SELECT firstname, lastname, pictureUrl, publicProfileUrl, headline FROM users WHERE linkedin_id = ? and headline like '% at %'", array($linkedinId));
     if (count($users) > 0) {
         return $users[0];
     }

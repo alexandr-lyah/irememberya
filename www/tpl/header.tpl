@@ -97,7 +97,7 @@
             {/if}
             &nbsp; &nbsp;
             	
-            Your score: <span id="scorenumber">0</span>
+            <span style="font-size:20px;">Score: <span id="scorenumber" style="font-size:20px;">0</span></span>
             <a href="logout.php" class="logout" style="margin-left:20px;">Logout</a>      	
         {/auth}
         </div>
