@@ -6,6 +6,7 @@
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <link rel="stylesheet" type="text/css" href="{$baseUrl}web/css/reset.css"/>
     <link rel="stylesheet" type="text/css" href="{$baseUrl}web/css/style.css"/>
+<link rel="stylesheet" type="text/css" href="{$baseUrl}web/css/style_dirk.css"/>
     <link rel="stylesheet" type="text/css" href="{$baseUrl}web/js/jtopbar/jtopbar.css"/>
     <!--[if lte ie 7]>
     <link rel="stylesheet" type="text/css" href="{$baseUrl}web/css/ie7fix.css"/>
