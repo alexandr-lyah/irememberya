@@ -9,10 +9,7 @@ if (isset($_SESSION['authorized']) && $_SESSION['authorized'] === true) {
 // If you are in index.php you don't need any redirects
 $_SESSION['redirect'] = '';
 
-$s->assign('displayshare', true);
 
-$s->display('header.tpl');
-$s->display('index.tpl');
-$s->display('footer.tpl');
+$s->display('payment.tpl');
 
 ?>

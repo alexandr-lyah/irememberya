@@ -10,7 +10,7 @@ $template_dir = "tpl";
 
 $production = false; 
 
-$path = "/Applications/MAMP/htdocs/irememberya/";
+$path = "/Applications/MAMP/htdocs/pitchmycrib/";
 
 $API_CONFIG = array(
     'appKey' => 'LinkedINAPPKEY',
@@ -21,5 +21,5 @@ $API_CONFIG = array(
 $salt = 'lkjlhy5678iuo123';
 
 $domain = 'http://irememberya.com/';
-$domainLocal = 'http://localhost/irememberya/www/'
+$domainLocal = 'http://localhost/pitchmycrib/www/'
 ?>

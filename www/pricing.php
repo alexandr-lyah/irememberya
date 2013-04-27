@@ -11,8 +11,8 @@ $_SESSION['redirect'] = '';
 
 $s->assign('displayshare', true);
 
-$s->display('header.tpl');
-$s->display('index.tpl');
+$s->display('headerpricing.tpl');
+$s->display('pricing.tpl');
 $s->display('footer.tpl');
 
 ?>

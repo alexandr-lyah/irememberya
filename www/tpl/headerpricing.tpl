@@ -3,9 +3,16 @@
     <title>Bootstrap 101 Template</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap -->
-    <link href="{$baseUrl}web/bootstrap/css/bootstrap.css" rel="stylesheet" media="screen">
     <script src="{$baseUrl}web/bootstrap/js/bootstrap.min.js"></script>
      <script src="{$baseUrl}web/js/jquery-1.5.1.min.js"></script>
+<!-- DC Pricing Tables JS -->
+<script type="text/javascript" src="http://www.dreamtemplate.com/dreamcodes/pricingtables/js/tsc_pricingtables.js"></script>
+    
+    
+   <link href="{$baseUrl}web/css/111.css" rel="stylesheet" media="screen">
+    
+    <link href="{$baseUrl}web/bootstrap/css/bootstrap.css" rel="stylesheet" media="screen">
+    
         <style type="text/css">
       body {
         padding-top: 5px;
@@ -45,16 +52,16 @@
     </style>
     
   </head>
-  <body>
+  <body style="text-align:center; align:center; margin:0px auto;">
   
   <div class="container-narrow">
         <div class="masthead">
         <ul class="nav nav-pills pull-right" style="margin-top:10px;">
-          <li <!--class="active"--><a href="#">| Hello Nuno |</a> </li>
+          <li class="active"><a href="#">Hello Nuno</a></li>
           <li ><a href="#">Search</a></li>
           <li><a href="#">My Listings</a></li>
-          <li><a href="#">Pitch My Crib</a></li>
-          <li ><a href="#">Logout</a></li>
+          <li><a href="#">Pitch Your Crib</a></li>
+          <li><a href="#">Logout</a></li>
         </ul>
         <h3 class="muted" ><img src="{$baseUrl}web/img/logo.png"/></h3>
       </div>
